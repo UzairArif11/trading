@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: url('/images/login-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+body #login-main {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+@media (max-width: 980px) {
+  body #login-main {
+    flex-direction: column !important;
+  }
+}
+body #login-main .box {
+  padding: 5% 10%;
+  width: 80%;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: transparent;
+}
+body #login-main .left {
+  color: #5affc5 !important;
+}
+body #login-main .left h2 {
+  font-size: 50px !important;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+body #login-main .left p {
+  margin: 1rem 0 1.5rem 0;
+}
+body #login-main .left a {
+  text-decoration: none;
+}
+body #login-main .left a .sign-up-btn {
+  border-radius: 100px;
+  padding: 0.7rem 2.3rem;
+  border: 1px solid #5affc5 !important;
+  width: -moz-max-content;
+  width: max-content;
+  color: #5affc5 !important;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+body #login-main .left a .sign-up-btn::before {
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  content: "";
+  position: absolute;
+  top: 438%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 200%;
+  height: 650%;
+  background-color: #5affc5 !important;
+}
+body #login-main .left a .sign-up-btn::after {
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  content: "Sign up";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  position: absolute;
+  color: #232323 !important;
+  transform: scale(0);
+}
+body #login-main .left a .sign-up-btn:hover::before {
+  top: 50%;
+}
+body #login-main .left a .sign-up-btn:hover::after {
+  transform: scale(1);
+}
+body #login-main .right .input-and-icon {
+  transition: 0.2s ease;
+  border-radius: 5px;
+  border: 1px solid #5affc5 !important;
+  width: 100%;
+  height: 3rem;
+  background-color: #5affc5 !important;
+  margin-bottom: 1rem;
+  max-width: 25rem;
+  cursor: text;
+  position: relative;
+}
+body #login-main .right .input-and-icon .input-front-box {
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: inherit;
+  height: inherit;
+  background-color: #232323 !important;
+  border: 1px solid #5affc5 !important;
+  border-radius: inherit;
+  position: absolute;
+  padding: 0 1rem;
+  top: -5px;
+  left: -5px;
+  box-sizing: border-box;
+  box-shadow: 7px 9px 12px rgba(0, 0, 0, 0.25);
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-direction: row !important;
+}
+body #login-main .right .input-and-icon .input-front-box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #d9d9d9;
+}
+body #login-main .right .input-and-icon .input-front-box input::-moz-placeholder {
+  color: #d9d9d9;
+}
+body #login-main .right .input-and-icon .input-front-box input::placeholder {
+  color: #d9d9d9;
+}
+body #login-main .right .input-and-icon .input-front-box svg {
+  transition: 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+  stroke: #5affc5 !important;
+  width: 18px;
+  height: 18px;
+  background-color: transparent;
+}
+body #login-main .right .input-and-icon:hover {
+  background-color: transparent !important;
+}
+body #login-main .right .input-and-icon:hover .input-front-box {
+  top: 0;
+  left: 0;
+  border-color: transparent !important;
+}
+body #login-main .right .input-and-icon:hover .input-front-box input {
+  color: #5affc5 !important;
+}
+body #login-main .right .input-and-icon:hover .input-front-box svg {
+  transform: perspective(100px) rotateY(180deg);
+}
+body #login-main .right .submit-custom-btn {
+  margin: 2rem 0 0 0;
+  position: relative;
+  max-width: 25rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 5px;
+}
+body #login-main .right .submit-custom-btn label[for=submit] {
+  transition: 0.3s ease;
+  transition-delay: 0.5s;
+  width: calc(100% - 2px);
+  height: 3rem;
+  background-color: transparent;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  border-radius: inherit;
+  color: #5affc5 !important;
+  border: 1px solid #5affc5 !important;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+body #login-main .right .submit-custom-btn label[for=submit]::before {
+  transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #5affc5 !important;
+  left: 15%;
+  bottom: -10px;
+  transform: rotateZ(45deg);
+}
+body #login-main .right .submit-custom-btn label[for=submit]::after {
+  transition: 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #5affc5 !important;
+  right: 15%;
+  top: -10px;
+  transform: rotateZ(45deg);
+}
+body #login-main .right .submit-custom-btn .top-border-bar {
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  width: 30px;
+  height: 1px;
+  background-color: #232323 !important;
+  position: absolute;
+  left: 13.3%;
+  z-index: 1;
+}
+body #login-main .right .submit-custom-btn .bottom-border-bar {
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 1;
+  width: 30px;
+  height: 1px;
+  background-color: #232323 !important;
+  position: absolute;
+  right: 13.3%;
+  bottom: 0;
+}
+body #login-main .right .submit-custom-btn::before {
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  content: "";
+  position: absolute;
+  top: 438%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  width: 200%;
+  height: 650%;
+  background-color: #5affc5 !important;
+}
+body #login-main .right .submit-custom-btn::after {
+  transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  content: "Log in";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  position: absolute;
+  color: #232323 !important;
+  cursor: pointer;
+  transform: scale(0);
+}
+body #login-main .right .submit-custom-btn:hover label[for=submit]::before {
+  bottom: -30px;
+}
+body #login-main .right .submit-custom-btn:hover label[for=submit]::after {
+  top: -30px;
+}
+body #login-main .right .submit-custom-btn:hover .top-border-bar,
+body #login-main .right .submit-custom-btn:hover .bottom-border-bar {
+  background-color: transparent !important;
+}
+body #login-main .right .submit-custom-btn:hover::before {
+  top: 50%;
+}
+body #login-main .right .submit-custom-btn:hover::after {
+  transform: scale(1);
+}
+body #login-main .right .other-options {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  margin-top: 1rem;
+  font-size: 12px;
+  max-width: 25rem;
+}
+body #login-main .right .other-options a {
+  color: #5affc5 !important;
+  cursor: pointer;
+  text-decoration: none;
+}
+body #login-main .right .other-options a:hover {
+  text-decoration: underline;
+}
+body #login-main .right .other-options p {
+  color: #d9d9d9;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,691 @@
+body {
+    overflow-y: overlay;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    // &:focus {
+    //     outline: none !important;
+    // }    
+
+    overflow-x: hidden;
+
+    .card {
+        margin: 1px !important;
+    }
+
+    .card-body {
+        padding: 0px !important;
+    }
+
+    #divMain {
+        margin: 5px;
+    }
+
+    .col-Left {
+        padding-right: 0px;
+        padding-left: 0px;
+        border-right: 3.5px solid;
+        overflow: hidden;
+    }
+
+    .col-Center {
+        padding-right: 0px;
+        padding-left: 0px;
+        overflow: hidden;
+    }
+
+    .col-Right {
+        padding-right: 0px;
+        padding-left: 0px;
+        border-left: 3.5px solid;
+    }
+
+    .col-Right2 {
+        padding-right: 0px;
+        padding-left: 0px;
+        border-top: 2px solid;
+    }
+
+    .row-Bottom {
+        border-top: 2px solid;
+        padding-top: 15px;
+        // z-index: 2;
+        // padding-right: 0px;
+        // padding-left: 0px;
+    }
+
+    .card {
+        // background-color: #525252;
+        // color: #fff;
+        margin-bottom: 2px;
+    }
+
+    .height-10 {
+        height: 10vh;
+    }
+
+    .height-20 {
+        height: 20vh;
+    }
+
+    .height-30 {
+        height: 30vh;
+    }
+
+    .height-40 {
+        height: 40vh;
+    }
+
+    .height-50 {
+        height: 50vh;
+    }
+
+    .height-60 {
+        height: 60vh;
+    }
+
+    .height-70 {
+        height: 70vh;
+    }
+
+    .height-80 {
+        height: 80vh;
+    }
+
+    .height-90 {
+        height: 90vh;
+    }
+
+    .height-100 {
+        height: 100vh;
+    }
+    .user-header-mobile{
+        position: fixed;
+        z-index: 999999;
+        top: 0;
+        left: 0;
+        padding: 1rem !important;
+        width: 100%;
+        .user-container{
+            margin-bottom: 0 !important;
+        }
+        .user-balance{
+            margin-top: 6px !important;
+            margin-bottom: 0.5rem !important;
+            color: #c5c5c5 !important;
+        }
+        .left-nav {
+            top: 97px;
+        }
+        @media (min-width:960px) {
+            display: none;
+        }
+    }
+}
+.chart-con {
+    &[data-mobile=true] {
+        margin-top: 6.5rem !important;
+    }
+}
+
+.place-order-Chart {
+    // max-width: 345px;
+    margin-left: 1.2rem !important;
+    margin-right: 1.2rem !important;
+    margin-top: 0.5rem !important;
+    display: flex;
+    justify-content: space-between; /* Add space between the buttons */
+    gap: 10px; /* Optional: Add some space between the buttons */
+    &[data-mobile="false"] {
+        display: none;
+    }
+  }
+  
+  .place-order-button-Chart {
+    flex: 1; /* Make buttons take equal space */
+    padding: 10px 20px; /* Add some padding for better look */
+    font-size: 16px; /* Adjust font size */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Add pointer cursor on hover */
+  }
+
+  // Mobile Stats Section Styles
+  .mobile-stats-section {
+    margin: 1rem 0;
+    border: none;
+    border-radius: 4px;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    display: block;
+    
+    .mobile-stats-header {
+      padding: 0.5rem 1rem;
+      border-bottom: none;
+      background-color: transparent;
+      
+      h3 {
+        margin: 0;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #c5c5c5;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        
+        &::before {
+          content: "📊";
+          margin-right: 0.5rem;
+        }
+        
+        &.mobile-stats-title-small {
+          font-size: 0.70rem !important;
+          font-weight: 500 !important;
+          padding-top: 2px !important;
+          padding-bottom: 2px !important;
+        }
+      }
+    }
+    
+    .mobile-stats-content {
+      padding-top: 0 !important;
+      padding-bottom: 0.12rem !important;
+      
+      .metrics-wrapper {
+        width: 100%;
+        display: block;
+        min-height: 130px;
+        overflow: visible;
+      }
+      
+      .metrics-panel {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        
+        .metrics-list {
+          margin: 0 !important;
+          padding: 0 !important;
+          list-style: none !important;
+          display: block !important;
+          width: 100% !important;
+          
+          // Hide all spans - we'll extract metrics directly (mobile only)
+          span.mobile-view-style,
+          .mobile-view-style {
+            // Make each metric item take full row - tight spacing like screenshot with dots
+            li.metricsData {
+              @media (max-width: 960px) {
+                display: flex !important;
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                padding: 0.15rem 1rem !important;
+                border: none !important;
+                background-color: transparent !important;
+                min-height: 28px !important;
+                position: relative !important;
+                width: 100% !important;
+                margin-bottom: 0 !important;
+                
+                // Hide info icons
+                i {
+                  display: none !important;
+                }
+                
+                strong {
+                  font-size: 0.875rem !important;
+                  color: #e0e0e0 !important;
+                  text-transform: none !important;
+                  font-weight: 500 !important;
+                  margin: 0 !important;
+                  line-height: 1.1 !important;
+                  text-align: left !important;
+                  white-space: nowrap !important;
+                  opacity: 0.9 !important;
+                  flex: 0 0 auto !important;
+                  position: relative !important;
+                  background-color: #2a2a2a !important;
+                  padding: 0 8px !important;
+                  z-index: 2 !important;
+                }
+                
+                span {
+                  font-size: 0.875rem !important;
+                  color: #ffffff;
+                  font-weight: 600 !important;
+                  line-height: 1.1 !important;
+                  text-align: right !important;
+                  white-space: nowrap !important;
+                  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+                  flex: 0 0 auto !important;
+                  background-color: #2a2a2a !important;
+                  padding: 0 8px !important;
+                  z-index: 2 !important;
+                }
+              }
+            }
+          }
+          
+          // Force show all metrics regardless of aria-selected (mobile only)
+          @media (max-width: 960px) {
+            span.mobile-view-style,
+            .mobile-view-style {
+              display: block !important;
+              width: 100% !important;
+            }
+            
+            .metricsData {
+              &[aria-selected="false"] {
+                display: flex !important;
+              }
+            }
+          }
+        }
+        
+        // Hide the settings gear icon in mobile stats section
+        .metrix-settings {
+          display: none !important;
+        }
+      }
+    }
+    
+    // Responsive adjustments
+    @media (max-width: 480px) {
+      margin: 0.75rem 0;
+      
+      .mobile-stats-header {
+        padding: 0.4rem 0.75rem;
+        
+        h3 {
+          font-size: 0.9rem;
+        }
+      }
+      
+              .mobile-stats-content {
+        padding-top: 0 !important;
+        padding-bottom: 0.12rem !important;
+        
+        .metrics-panel .metrics-list {
+          
+          span.mobile-view-style li.metricsData,
+          .mobile-view-style li.metricsData,
+          li.metricsData {
+            min-height: 20px !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            position: relative !important;
+            background: none !important;
+            
+            &::after {
+              content: '' !important;
+              position: absolute !important;
+              left: 0 !important;
+              right: 0 !important;
+              top: 50% !important;
+              transform: translateY(-50%) !important;
+              opacity: 0.2;
+              height: 3px !important;
+              background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 1.5px, transparent 1.5px) !important;
+              background-size: 6px 3px !important;
+              background-repeat: repeat-x !important;
+              background-position: center !important;
+              z-index: 1 !important;
+            }
+            
+            strong {
+              font-size: 0.7rem !important;
+              color: white !important;
+              font-weight: 200 !important;
+              opacity: 1 !important;
+              background-color: #232323 !important;
+              padding: 0 0.5rem 0 0.8rem !important;
+              z-index: 3 !important;
+              position: relative !important;
+              margin: 0 !important;
+            }
+            
+            span {
+              font-size: 0.7rem !important;
+              color: #ffffff;
+              font-weight: 200 !important;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+              background-color: #232323 !important;
+              padding: 0 0.8rem 0 0.5rem !important;
+              z-index: 3 !important;
+              position: relative !important;
+              margin: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Ensure mobile stats section only shows on mobile devices
+  @media (min-width: 960px) {
+    .mobile-stats-section {
+      display: none;
+    }
+  }
+
+// Mobile Navigation Bar Styles - Force to bottom using viewport calculation
+@media (max-width: 959px) {
+  // Reset all browser defaults that could cause gaps
+  * {
+    box-sizing: border-box !important;
+  }
+  
+  html {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    padding-bottom: 55px !important; // Adjusted for 45px nav height
+    height: 100% !important;
+    width: 100% !important;
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+  
+  // Fix mobile history tabs pagination visibility
+  .tabs-ah-mb-data {
+    padding-bottom: 95px !important; // Adjusted for 45px nav height
+    height: calc(100vh - 155px) !important; // Adjusted for 45px nav height
+    overflow-y: auto !important; // Enable vertical scrolling
+    
+    .data-x-atomic {
+      padding-bottom: 40px !important; // Additional padding for each tab content
+      min-height: 100% !important; // Ensure full height utilization
+      overflow-y: auto !important; // Enable scrolling in each tab
+    }
+  }
+  
+  // Fix mobile position wrapper pagination visibility
+  .mobile-positions-wrapper {
+    padding-bottom: 55px !important; // Adjusted for 45px nav height
+  }
+  
+  // Fix pagination controls positioning - appears at bottom of content
+  .pagination-controls {
+    position: relative !important; // Normal flow positioning
+    width: 100% !important;
+    margin: 0 auto 30px auto !important; // No gap above, space below for nav bar
+    z-index: 100 !important; // Above other content
+    min-height: 35px !important; // Ensure visible height
+    display: flex !important; // Ensure flex display
+    justify-content: space-between !important; // Distribute buttons
+    align-items: center !important; // Center vertically
+    padding: 8px 16px !important; // Add padding
+    background-color: #3b3a3a !important; // Consistent background
+    border-radius: 4px !important; // Rounded corners
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important; // Shadow for visibility
+    border: 1px solid #555 !important; // Border for definition
+    
+    // Style pagination buttons
+    .pagination-button,
+    button {
+      background-color: transparent !important;
+      border: none !important;
+      cursor: pointer !important;
+      border-radius: 50% !important;
+      padding: 8px !important;
+      transition: background 0.2s !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      color: rgba(237, 237, 237, 0.868) !important;
+      width: 35px !important;
+      height: 35px !important;
+      
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        fill: currentColor !important;
+      }
+      
+      &:disabled {
+        opacity: 0.3 !important;
+        cursor: not-allowed !important;
+        color: #7a7a7a !important;
+      }
+      
+      &:hover:not(:disabled) {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+      }
+      
+      &:active:not(:disabled) {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+      }
+    }
+  }
+  
+  // Fix mobile position tabs content
+  .mob-position-tab {
+    padding-bottom: 90px !important; // Adjusted for 40px nav height
+    box-sizing: border-box !important;
+    min-height: calc(100vh - 220px) !important; // Adjusted for 40px nav height
+    overflow-y: auto !important; // Enable scrolling
+    
+    // Ensure position history component has proper spacing
+    > div {
+      padding-bottom: 80px !important; // Extra space for pagination within components
+    }
+  }
+  
+  // Remove any container margins that might cause gaps
+  #root, .global-platfrom {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  
+  // Force navigation using top calculation and override theme bottom property
+  .smart-brain-mobile-view {
+    position: fixed !important;
+    top: calc(100vh - 45px) !important; // Increased to 45px
+    bottom: auto !important; // Override theme's bottom: 10px !important
+    left: 0 !important;
+    right: 0 !important;
+    width: 100vw !important;
+    height: 45px !important; // Increased to 45px
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 999999999999 !important;
+    box-sizing: border-box !important;
+  }
+  #mobile-view-bottom-z-index {
+    z-index: -22 !important;
+  }
+  
+  // Additional override with higher specificity to beat theme styles
+  body .smart-brain-mobile-view,
+  .theme-dark .smart-brain-mobile-view,
+  [class*="theme-"] .smart-brain-mobile-view {
+    bottom: auto !important;
+    top: calc(100vh - 45px) !important; // Increased to 45px
+    transform: none !important;
+    transition: none !important;
+  }
+  
+   // Override all theme styles with maximum specificity - now that nav is outside containers
+  .smart-brain-mobile-view {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    width: 100vw !important;
+    height: auto !important;
+    min-height: 40px !important; // Further reduced to 40px
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important; // Gradient background
+    border-top: 1px solid #3a3a3a !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+    padding: 4px 0 calc(4px + env(safe-area-inset-bottom)) !important; // Further reduced padding for 40px height
+    z-index: 999999999999 !important;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4), 0 -1px 4px rgba(255, 255, 255, 0.1) !important; // Enhanced shadow
+    margin: 0 !important;
+    transform: none !important;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; // Smooth transition
+    backdrop-filter: blur(10px) !important; // Glass effect
+    
+    // Add subtle animation on load
+    animation: slideUpNav 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    
+    .btn-icon-block {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      padding: 4px !important; // Further reduced for 40px height
+      min-width: 40px !important; // Further reduced for 40px height
+      min-height: 32px !important; // Further reduced for 40px height
+      width: auto !important;
+      height: auto !important;
+      border-radius: 8px !important; // Slightly reduced for 40px height
+      // transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important; // Smooth transitions
+      cursor: pointer !important;
+      text-decoration: none !important;
+      color: #c5c5c5 !important;
+      flex: 1 !important;
+      max-width: 65px !important; // Further reduced for 40px height
+      margin: 2px !important;
+      background-color: transparent !important;
+      position: relative !important;
+      overflow: hidden !important;
+      
+      // Hide Stats navigation button
+      &[role="stats"] {
+        display: none !important;
+      }
+      
+      // Hover effects with scale and glow
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        color: #ffffff !important;
+        // transform: translateY(-2px) scale(1.05) !important; // Lift and scale effect
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 255, 255, 0.1) !important; // Glow effect
+      }
+      
+      // Active/pressed state
+      // &:active {
+      //   transform: translateY(0px) scale(0.98) !important; // Quick bounce back
+      //   transition: all 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+      // }
+      
+      // Add subtle pulse animation for active states
+      // &.active {
+      //   animation: pulseGlow 2s infinite ease-in-out !important;
+      // }
+      
+      svg {
+        width: 14px !important; // Even smaller for 40px height - made ultra thin
+        height: 14px !important; // Even smaller for 40px height - made ultra thin
+        margin-bottom: 2px !important; // Reduced margin for 40px height
+        color: inherit !important;
+        stroke-width: 1.0 !important; // Made even thinner for ultra thin look
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+        
+        path {
+          fill: currentColor !important;
+          stroke: currentColor !important;
+          stroke-width: inherit !important;
+        }
+      }
+      
+      p {
+        font-size: 0.55rem !important; // Further reduced for 40px height
+        margin: 0 !important;
+        font-weight: 300 !important; // Ultra thin font weight
+        text-align: center !important;
+        color: inherit !important;
+        line-height: 1 !important;
+        letter-spacing: 0.2px !important; // Slightly reduced letter spacing for smaller size
+        transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+      }
+      
+      // Add ripple container for better animation
+      .ripple-container {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        overflow: hidden !important;
+        border-radius: inherit !important;
+      }
+    }
+  }
+  
+  // Add keyframe animations
+  @keyframes slideUpNav {
+    from {
+      transform: translateY(100%) !important;
+      opacity: 0 !important;
+    }
+    to {
+      transform: translateY(0) !important;
+      opacity: 1 !important;
+    }
+  }
+  
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.1) !important;
+    }
+    50% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 25px rgba(255, 255, 255, 0.1) !important;
+    }
+  }
+  
+  // Add staggered entrance animation for nav items
+  // .smart-brain-mobile-view .btn-icon-block {
+  //   animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both !important;
+    
+  //   &:nth-child(1) { animation-delay: 0.1s !important; }
+  //   &:nth-child(2) { animation-delay: 0.2s !important; }
+  //   &:nth-child(3) { animation-delay: 0.3s !important; }
+  //   &:nth-child(4) { animation-delay: 0.4s !important; }
+  //   &:nth-child(5) { animation-delay: 0.5s !important; }
+  // }
+  
+  // @keyframes slideInUp {
+  //   from {
+  //     transform: translateY(30px) !important;
+  //     opacity: 0 !important;
+  //   }
+  //   to {
+  //     transform: translateY(0) !important;
+  //     opacity: 1 !important;
+  //   }
+  // }
+}
+
+// Hide navigation on desktop - ensure it doesn't show on laptop/desktop
+@media (min-width: 960px) {
+  .smart-brain-mobile-view {
+    display: none !important;
+  }
+  
+  body {
+    padding-bottom: 0 !important; // Remove bottom padding on desktop
+  }
+}

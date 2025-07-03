@@ -1,0 +1,77 @@
+body {
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0;
+}
+body .card {
+  margin: 1px !important;
+}
+body .card-body {
+  padding: 0px !important;
+}
+body #divMain {
+  margin: 5px;
+}
+body .col-Left {
+  padding-right: 0px;
+  padding-left: 0px;
+  border-right: 3.5px solid;
+  overflow: hidden;
+}
+body .col-Center {
+  padding-right: 0px;
+  padding-left: 0px;
+  overflow: hidden;
+}
+body .col-Right {
+  padding-right: 0px;
+  padding-left: 0px;
+  border-left: 3.5px solid;
+}
+body .col-Right2 {
+  padding-right: 0px;
+  padding-left: 0px;
+  border-top: 2px solid;
+}
+body .row-Bottom {
+  border-top: 2px solid;
+  padding-top: 15px;
+  z-index: 2;
+}
+body .card {
+  margin-bottom: 2px;
+}
+body .height-10 {
+  height: 10vh;
+}
+body .height-20 {
+  height: 20vh;
+}
+body .height-30 {
+  height: 30vh;
+}
+body .height-40 {
+  height: 40vh;
+}
+body .height-50 {
+  height: 50vh;
+}
+body .height-60 {
+  height: 60vh;
+}
+body .height-70 {
+  height: 70vh;
+}
+body .height-80 {
+  height: 80vh;
+}
+body .height-90 {
+  height: 90vh;
+}
+body .height-100 {
+  height: 100vh;
+}/*# sourceMappingURL=Main.css.map */

@@ -1,0 +1,66 @@
+.order-book-container {
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.order-book-side {
+  flex: 1;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+}
+
+.order-book-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin: 0 auto;
+}
+
+.order-book-table-header-price {
+  padding: 2px;
+  text-align: left;
+  font-weight: normal;
+}
+
+.order-book-table-header-quantity {
+  padding: 2px;
+  text-align: right;
+  font-weight: normal;
+}
+
+.order-book-table-cell-bid-price {
+  width: 100% !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.order-book-table-cell-bid-quantity {
+  width: 100% !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+
+.order-book-table-cell-ask-price {
+  width: 100% !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.order-book-table-cell-ask-quantity {
+  width: 100% !important;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: right;
+}/*# sourceMappingURL=Order-Book.css.map */

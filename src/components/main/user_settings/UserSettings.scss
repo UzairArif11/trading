@@ -1,0 +1,60 @@
+.user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem !important;
+    @media (min-width: 960px) {
+        margin-bottom: 0.25rem !important;
+    }
+
+    #currentTheme{
+        text-transform: capitalize;
+    }
+
+    select{
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+    .theme-switcher {
+        text-align: center;
+    }
+
+    .user-info-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .user-info {
+        padding-right: 5px;
+        font-weight: bold;
+    }
+
+    .logout-button {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+
+    .non-user-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login-button {
+        padding: 4px 8px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+}
+
+.utc-time {
+    margin-bottom: 7px !important;
+}

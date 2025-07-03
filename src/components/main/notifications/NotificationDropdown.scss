@@ -1,0 +1,150 @@
+.notification-dropdown {
+    position: relative;
+    // display: inline-block;
+    z-index: 999;
+    .notification-icon {
+        background: none;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        // top: 10px;
+        left: 123px;
+
+        img {
+            width: 24px; // Adjust based on your icon size
+        }
+
+        // .notification-count {
+        //     position: absolute;
+        //     // top: -10px;
+        //     // right: -10px;
+        //     background-color: red;
+        //     color: white;
+        //     border-radius: 50%;
+        //     padding: 2px 6px;
+        //     font-size: 12px;
+        //     line-height: 12px;
+        // }
+
+        .notification-count {
+            position: absolute;
+            background-color: rgb(225, 50, 50) !important;
+            color: white;
+            border-radius: 99998px !important;
+            padding: 1px 3px !important;
+            font-size: 9px;
+            right: -9px;
+            top: 0px;
+            /* margin-right: 38px !important; */
+            /* line-height: 12px; */
+        }
+        @media (max-width: 960px) {
+            // top: 3px;
+            // left: 68px;
+            position: unset;
+            margin-right: 3px;
+        }
+    }
+    @media (max-width: 960px) {
+        margin-right: 8px !important;
+    }
+
+    .notification-list {
+        position: absolute;
+        // top: 100%;
+        // right: 0;
+        right: -105px !important;
+        top: 33px;
+        width: 300px; // Adjust based on your preference
+        background-color: #3b3a3a !important;
+        color: #c5c5c5;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        // overflow: hidden;
+
+        @media (min-width: 401px) and (max-width: 960px) {
+              right: 2px !important;
+              top: 37px;
+          }
+          
+
+        @media (min-width: 300px) and (max-width: 400px) {
+            right: -17px !important;
+        }
+
+        @media (max-width: 320px) {
+            right: -23px !important;
+            width: 246px;
+            .heading1 button{
+                width: 156px;
+                padding: 0.4rem 0.3rem !important;
+                margin-inline: 0.2rem !important;
+            }
+        }
+        .visible-notification {
+            border-radius: 5px !important;
+        }
+        .heading{
+            border-bottom: 1px solid #000000;
+            padding: 11px 11px 11px 5px !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .close-icon{
+                padding: 2px 5px !important;
+                border-radius: 4px !important;
+            }
+        }
+
+        .notification-list-item{
+            // max-height: 500px;
+            max-height: 250px;
+            overflow-y: auto;
+        }
+        
+        .no-notifications {
+            text-align: center;
+            padding: 10px !important;
+            font-size: 14px;
+            color: #c5c5c5;
+            height: 103px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+        .notification-item {
+            // padding: 10px;
+            border-bottom: 1px solid #000000;
+            text-align: left;
+            padding: 10px 0 10px 10px !important;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            .message {
+                font-size: 14px;
+            }
+
+            .date {
+                font-size: 12px;
+                // color: rgb(33, 196, 109);
+            }
+        }
+    }
+
+    @media (max-width: 960px) {
+        .load-more {
+            width: 100%;
+            background-color: #5a5a5a;
+            padding: 5px !important;
+            color: #c5c5c5;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+}

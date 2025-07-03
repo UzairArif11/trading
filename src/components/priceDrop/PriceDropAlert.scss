@@ -1,0 +1,234 @@
+$bodyColor: #232323 !important;
+$bodyColorLow: #232323;
+// $chartBgColor: transparent;
+$chartBgColor: $bodyColor;
+$firstBox: #2d2d2d !important;
+$firstBoxButton: #3b3a3a !important;
+$beforeFirstBox: #2b2b2bc2 !important;
+$inputBorderColor: #484848 !important;
+$downPrice: rgb(245, 36, 36) !important;
+$upPrice: rgb(17, 209, 97) !important;
+$boldTextColor: white !important;
+$normalTextColor: #c5c5c5 !important;
+$greenButton: rgb(33, 196, 109) !important;
+$redButton: rgb(225, 50, 50) !important;
+$buttonShadow: rgb(0 0 0 / 7%) !important;
+$greenDom: #0c724ac4 !important;
+$redDom: #db2e2ea3 !important;
+$greenDomText: #1ccf87 !important;
+$redDomText: #ea2b2b !important;
+$domQuantity: $normalTextColor;
+$inputGreenShadow: rgba(33, 196, 109, 0.144) !important;
+$chartOverlay: rgb(38 37 37 / 38%) !important;
+$chartOverlayBold: #262525e6;
+$divShadow: #00000087;
+$firstBoxContrast: #2e2e2e;
+$chartDownColor: rgb(245, 36, 36);
+$chartUpColor: rgb(17, 209, 97);
+$error: #f15 !important;
+$error2: #e13232 !important;
+$errorShadow: rgba(255, 17, 84, 0.347) !important;
+$candleLight: rgb(17, 209, 97);
+$candleDark: #2d2d2d;
+$inactivePositionBgClr: rgba(125, 120, 120, 0.36) !important;
+@mixin flex($j, $a, $d) {
+  display: flex !important;
+  justify-content: $j !important;
+  align-items: $a !important;
+  flex-direction: $d !important;
+}
+.confirm-boxs{
+
+.py-10 {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+.px-40 {
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+}
+.mt-10{
+  margin-top: 10px !important;
+}
+.width200 {
+  width: 50% !important;
+}
+.color-gray{
+  color: $normalTextColor;
+  width: 40%;
+  white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  // text-align: center;
+  font-size: 16px !important;
+  @media (max-width: 350px) {
+    font-size: 10px !important;
+    margin-left: 12px !important;
+  }
+}
+
+.symbol-no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
+  @media (max-width: 768px) {
+    font-size: 14px !important;
+  }
+  @media (max-width: 480px) {
+    font-size: 12px !important;
+  }
+}
+.description-full-width {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+  word-break: break-word;
+  font-size: 14px !important;
+  @media (max-width: 768px) {
+    font-size: 12px !important;
+  }
+  @media (max-width: 480px) {
+    font-size: 10px !important;
+  }
+}
+
+.bg-green {
+  background-color: rgb(33, 196, 109) !important;
+}
+#trade-button{
+  border-top-left-radius: 5px !important;
+}
+#cancel-button{
+  border-top-right-radius: 5px !important;
+}
+.price-div{
+  width: 100%;
+}
+.price-first-div{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around !important;
+  margin-inline: 10px !important;
+}
+// Price Box Container (Mobile-Responsive)
+.price-box-container {
+  width: 100%;
+  margin-right: 10px !important;
+}
+@media (max-width: 390px) {
+  .buy-small-font {
+    font-size: 12px !important;
+    padding-right: 5px !important; /* Smaller font size for small devices */
+  }
+  .sell-small-font {
+    font-size: 12px !important;
+    padding-left: 5px !important; /* Smaller font size for small devices */
+  }
+  .amount-div{
+      width: 80px !important;
+      margin-inline: 10px !important;
+  }
+  #buyMarketOrder{
+      height: 40px !important;
+      width: 60% !important;
+      margin-left: 5px;
+  }
+  #buyMarketPrice{
+      font-size: 8px !important;
+      font-weight: bolder !important;
+  }
+  #sellMarketOrder{
+    height: 40px !important;
+    width: 60% !important;
+    font-size: 8px !important;
+  }
+  #sellMarketPrice{
+    font-size: 8px !important;
+    font-weight: bolder !important;
+    padding-left: 10px !important;
+  }
+}
+}
+
+.confirm-boxs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $chartOverlay;
+  z-index: 999999999999;
+  display: none !important;
+  &[role='true'] {
+    @include flex(center, center, row);
+  }
+  &[role='onway'] {
+    @include flex(center, center, row);
+    .card {
+      .row-scss {
+        button:nth-child(3),
+        button:nth-child(1) {
+          display: none !important;
+        }
+        button:nth-child(2) {
+          display: block;
+        }
+      }
+      h2 {
+        &:nth-child(1) {
+          display: none !important;
+        }
+        &:nth-child(2) {
+          display: block !important;
+        }
+      }
+    }
+  }
+  .card {
+    margin: 1.5rem !important;
+    background-color: $firstBox;
+    box-shadow: 8px 8px 60px $divShadow;
+    width: 510px !important;
+    h2 {
+      padding: 1.5rem !important;
+      text-align: center;
+      font-size: 18px;
+      color: $normalTextColor;
+      border-bottom: 1px solid $bodyColor;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    overflow: hidden !important;
+    .row-scss {
+      @include flex(space-evenly, center, row);
+      height: 40px !important;
+      z-index: 100;
+      button {
+        transition: 0.1s ease;
+        color: $bodyColor;
+        width: 100% !important;
+        border-radius: 0 !important;
+        height: 100% !important;
+        // &:nth-child(1) {
+        //   border-right: 1px solid $bodyColor;
+        //   background-color: $greenButton;
+        //   color: black;
+        // }
+        &:nth-child(2) {
+          background-color: $firstBoxButton;
+          display: none;
+        }
+        &:nth-child(3) {
+          background-color: $redButton;
+          color: $bodyColor;
+        }
+        &:hover {
+          filter: brightness(90%);
+        }
+      }
+    }
+  }
+}

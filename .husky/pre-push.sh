@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# script prevents pushing to develop and master by mistake
+
+branch="$(git rev-parse --abbrev-ref HEAD)"
+
+if [ "$branch" = "main" ]; then
+  echo "You can't push directly to main branch"
+  exit 1
+fi

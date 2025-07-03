@@ -1,0 +1,150 @@
+.mode-tabs {
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.mode-tab-button {
+  width: 40%;
+  margin: 1px;
+}
+
+.order-panel {
+  height: 70vh;
+  transition: height 0.5s ease;
+}
+
+.order-panel-symbol {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.order-tabs {
+  display: flex;
+}
+
+.tab-button {
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+.order-section {
+  display: none;
+  padding: 20px;
+  margin-top: -1px;
+  transition: opacity 0.5s ease;
+}
+
+.order-label {
+  margin-top: 10px;
+}
+
+.place-order {
+  text-align: center;
+}
+
+.place-order-button {
+  width: 80%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  padding-bottom: 2px;
+}
+
+.price-box-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.price-box {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  padding: 4px;
+  width: 100%;
+  height: 40px;
+}
+
+.price-box-buy {
+  border-radius: 10px 0 0 10px;
+  padding-left: 8px;
+}
+
+.price-box-sell {
+  border-radius: 0 10px 10px 0;
+  text-align: right;
+  padding-right: 8px;
+}/*# sourceMappingURL=Order-Panel.css.map */
+
+
+
+.custom-option {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 5px 10px;
+    padding: 0px 4px;
+    border-bottom: 0.1px solid rgb(88, 88, 88);
+  }
+  
+  .custom-option:not(:last-child) {
+    margin-bottom: 5px; /* Add margin-bottom to each option except the last one */
+  }
+  
+  .symbol {
+    font-size: 11px;
+  }
+  
+  .custom-option .symbol, .header .symbol-title {
+    flex: 1;
+    text-align: left;
+    padding: 5px 10px;
+  }
+  
+  .custom-option .bid, .header .bid-title,
+  .custom-option .ask, .header .ask-title {
+    flex: 0.5;
+    text-align: right;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+  .custom-option .fractional {
+    font-size: 0.8em;
+  }
+  
+  .header {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: #2d2d2d; /* Solid background to cover behind scrolling */
+    color: #ffffff;
+    padding: 10px 20px !important;
+    margin-bottom: 5px !important;
+    position: sticky; /* Makes the header sticky */
+    top: 0; /* Keeps it at the top */
+    z-index: 2; /* Ensures it stays above other content */
+  }
+  
+  .header .symbol-title, .header .bid-title, .header .ask-title {
+    margin: 0;
+  }
+  
+  /* Customization for the react-select component */
+  .custom-option.is-focused {
+    background-color: transparent; /* Remove the default focus background */
+  }
+  
+  .custom-option:hover {
+    background-color: #333; /* Custom hover color */
+  }
+  
+  .react-select__option--is-selected {
+    background-color: #444 !important; /* Selected color without zoom effect */
+    color: #ffffff !important;
+  }
+  

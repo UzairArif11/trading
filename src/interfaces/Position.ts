@@ -1,0 +1,30 @@
+export interface Position {
+  id: number;
+  position_id: string;
+  created_at: Date | null;
+  symbol: string;
+  quantity: number;
+  direction: string;
+  entry_price: number;
+  TP: number;
+  SL: number;
+  netEUR: number;
+  status: string;
+  userId: number;
+  // margin: number;
+  exit_price: number;
+  position_closed_at: Date | null;
+  totalUnrealizedPnL:number;
+  converted_entry_price: number;
+  amount: number;
+  asset_type: string;
+  comment: string;
+  stop_loss_pips: number;
+  take_profit_pips: number;
+  ask_price: number;
+  bid_price: number;
+  lot_size: number;
+  trade_type: string;
+  lot_step: number;
+  is_bot_trade:any;
+}

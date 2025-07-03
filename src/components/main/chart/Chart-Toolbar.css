@@ -1,0 +1,14 @@
+.am5stock-control-button {
+  border: 0px !important;
+  margin-right: 20px !important;
+  cursor: pointer !important;
+  font-size: 10px;
+}
+
+.am5stock-control-label {
+  font-size: 10px !important;
+}
+
+.am5stock-control-list-arrow {
+  display: none !important;
+}/*# sourceMappingURL=Chart-Toolbar.css.map */

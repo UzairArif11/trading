@@ -1,0 +1,228 @@
+.custom-select-container {
+  // width: 60%; /* Default width is 60% of the parent or viewport */
+  // max-width: 320px;
+    // width: 320px;
+    position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #2D2D2D;
+    border-radius: 5px;
+  }
+  
+  .custom-select {
+    height: 30px;
+    width: 96%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px !important;
+    margin: 0.4rem 0.9rem 0 0.4rem !important;
+    background-color: #232323;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    border: 1px solid #232323;
+    font-size: 16px;
+  }
+  .custom-select:hover
+  {
+    border: 1px solid var(--buy-color);
+  }
+  
+  .arrow {
+    font-size: 16px;
+    // color: #2ecc71;
+    margin-right: 13px !important;
+  }
+  
+  .custom-search {
+    height: 20px;
+    width: 94%;
+    padding: 1px !important;
+    margin-left: 10px !important;
+    font-weight: 700;
+    background-color: #232323;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+  }
+  .custom-dropdown {
+    position: absolute;
+    top: 37px;
+    left: 7px;
+    transition: 0.5s linear !important;
+    background-color: #232323;
+    width: 95%; /* Relative to the parent container */
+    // max-width: 300px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  
+  .custom-menu {
+    height: 380px;
+    overflow-y: auto;
+    padding: 10px !important;
+    margin: 8px !important;
+  }
+  
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 10px !important;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .symbol-title, .bid-title, .ask-title {
+    padding-left: 8px !important;
+    text-align: start !important;
+  }
+
+  .custom-option {
+    padding: 10px !important;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .custom-option:hover {
+    background-color: #3b3a3a;
+  }
+
+  .custom-option.selected {
+    background-color: #3b3a3a;
+    color: #ffffff;
+  }
+  
+  
+  .symbol {
+    max-width: 68px;
+    min-width: 68px;
+    text-align: start !important;
+    font-size: 10px;
+  }
+  
+  .bid, .ask {
+    text-align: center !important;
+    font-size: 10px;
+  }
+  
+  .bid {
+    color: #2ecc71;
+  }
+  
+  .ask {
+    color: #e74c3c;
+  }
+  
+  @media (max-width: 1024px) {
+    .custom-select-container {
+      width: 320px;
+      padding: 0 15px;
+    }
+    .custom-select
+    {
+      width: 93%;
+    }
+  
+    .header,
+    .custom-option {
+      grid-template-columns: 1.5fr 1fr 1fr;
+      font-size: 13px;
+    }
+  
+    .symbol {
+      font-size: 11px;
+      min-width: 90px;
+    }
+  
+  }
+  
+  /* ====================
+     Large Mobile Styles
+     ==================== */
+  @media (max-width: 768px) {
+    .custom-select-container {
+      width: 101%;
+      padding: 0 10px;
+    }
+    .custom-select{
+      width: 96%;
+    }
+  
+    .header,
+    .custom-option {
+      grid-template-columns: 1.5fr 1fr 1fr; 
+      font-size: 12px; 
+    }
+
+    .symbol-title
+    {
+      text-align: start !important;
+      padding-left: 8px !important;
+    }
+  
+    .symbol {
+      font-size: 12px;
+      min-width: 280px;
+    }
+  }
+  
+  /* ====================
+     Small Mobile Styles
+     ==================== */
+  @media (min-width: 425px) {
+    .custom-select-container {
+      // width: 420px;
+      padding: 0 5px;
+    }
+    .header,
+    .custom-option {
+      grid-template-columns: 1.5fr 1fr 1fr;
+      font-size: 11px;
+    }
+  
+    .symbol {
+      font-size: 11px;
+      min-width: 110px;
+    }
+  }
+  
+  /* ====================
+     Extra Small Mobile Styles
+     ==================== */
+
+@media (max-width: 375px) {
+  .header,
+  .custom-option {
+      grid-template-columns: 1.5fr 1fr 1fr; /* Maintain grid structure */
+      font-size: 11px; /* Slightly larger font size than 320px */
+  }
+
+  .symbol {
+      font-size: 11px;
+      text-align: start !important;
+      min-width: 100px; /* Adjust for better spacing */
+  }
+}
+
+
+  @media (max-width: 320px) {
+    .custom-select
+    {
+      width: 95%;
+    }
+    .header,
+    .custom-option {
+      grid-template-columns: 1.5fr 1fr 1fr;
+      font-size: 10px;
+    }
+  
+    .symbol {
+      font-size: 10px;
+      min-width: 97px;
+    }
+  }

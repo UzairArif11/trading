@@ -1,0 +1,81 @@
+.tabs-section-acc {
+  height: 24vh !important;
+  overflow: hidden !important;
+}
+
+.tabs-acc {
+  display: flex;
+  width: 30%;
+}
+
+.tab-button-acc {
+  flex: 1;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+.tab-content-acc {
+  display: none;
+}
+.tab-content-acc.tab-content-active-acc {
+  display: block;
+}
+
+.pos-section {
+  padding: 8px;
+}
+
+.open-positions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.open-positions-table thead {
+  font-size: 10px;
+  border: 0px;
+}
+
+.open-positions-table th,
+.open-positions-table td {
+  font-weight: normal;
+  text-align: center;
+}
+
+.open-positions-table th {
+  padding: 3px;
+}
+
+.open-positions-table td {
+  border-bottom: 1px solid;
+  font-size: 10px;
+  padding: 2px;
+}
+
+.history-section {
+  padding: 8px;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.history-table thead {
+  font-size: 10px;
+  border: 0px;
+}
+
+.history-table th,
+.history-table td {
+  font-weight: normal;
+  text-align: center;
+}
+
+.history-table th {
+  padding: 3px;
+}
+
+.history-table td {
+  border-bottom: 1px solid;
+  font-size: 10px;
+  padding: 2px;
+}/*# sourceMappingURL=Account-Manager.css.map */

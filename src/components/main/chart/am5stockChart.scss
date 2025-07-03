@@ -1,0 +1,906 @@
+$bodyColor: #232323 !important;
+$chartOverlay: rgb(38 37 37 / 38%) !important;
+$chartOverlayBold: #262525e6;
+$greenButton: var(--buy-color) !important;
+@mixin flex($j, $a, $d) {
+  display: flex !important;
+  justify-content: $j !important;
+  align-items: $a !important;
+  flex-direction: $d !important;
+}
+.chart-box path:hover{
+    stroke: var(--buy-color) !important;
+}
+@media (max-width: 920px) {
+    #chartcontrols
+    {
+        position: absolute !important;
+        top: 70px !important;
+        left: 0 !important;
+    }
+}
+#chartcontrols
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 37px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: .6rem .2rem !important;
+    transition: .1s ease;
+    z-index: 999;
+    backdrop-filter: blur(1px);
+    .am5stock{
+        background: transparent;
+        height: fit-content;
+        margin: 0 1rem !important;
+        width: max-content;
+    }
+    
+    li:hover{
+        svg,
+        path{
+            stroke: var(--buy-color) !important;
+        }
+    }    
+
+    .am5stock:nth-child(1)
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border: none;
+        position: relative;
+
+        .am5stock-control-icon
+        {
+            min-width: 1.2em;
+            min-height: 1.2em;
+            max-width: 1.2em;
+            display: inline-block !important;
+            position: relative;
+        }
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 30px;
+            padding: 0.4rem !important;
+        }
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) !important;
+        }
+        .am5stock-control-icon svg path:hover
+        {
+            color: var(--buy-color) !important;
+        }
+        .am5stock-control-label
+        {
+            color: #c5c5c5;
+            display: flex;
+            margin: 0 -1rem 0 1.6rem !important;
+            font-size: 10px;
+        }
+
+        .am5stock-control-list-container
+        {
+            background-color: rgba(38,37,37,.902);
+            border: 1px solid #2d2d2d;
+            border-radius: 0 0 6px 6px ;
+            border-top: none;
+            margin-top: 10px !important;
+            padding: 0 !important;
+            z-index: 999;
+        }
+        .am5stock-control-list-arrow
+        {
+            position: absolute !important;
+            left: 10px !important;
+            display: inline-block !important;
+            padding: 5px !important;
+            background-color: rgba(38,37,37,.902) !important;
+            border-top: none;
+            border-bottom: 1px solid #2d2d2d;
+            border-right: 1px solid #2d2d2d;
+        }
+        .am5stock-list-search
+        {
+            padding-bottom: 0.25em !important;
+            background-color: rgba(38,37,37,.902) !important;
+            margin: 0.5em 0.7em !important;
+        }
+        .am5stock-list-search input
+        {
+            background: transparent;
+            padding: 6px 10px 6px 10px !important;
+            margin-top: 5px !important;
+        }
+        .am5stock-control-list
+        {
+            overflow-y: auto;
+            max-height: 300px;
+            margin: 5px !important;
+            padding: 2px !important;
+        }
+        .am5stock-control-list li
+        {
+            padding: 2px 6px !important;
+        }
+        .am5stock-list-item:hover
+        {
+            background: var(--buy-color);
+            border-radius: 5px;
+        }
+
+        .selected-symbol{
+            border-color: var(--buy-color) !important;
+            color: black !important;
+
+            // background-color: #ff0000 !important;
+            background: var(--buy-color) !important;
+            border-radius: 5px;
+
+            label{
+                color: black !important;
+            }
+        }
+    }
+
+
+    .am5stock:nth-child(2)
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border: none;
+        position: relative;
+        .am5stock-control-icon
+        {
+            min-width: 1.2em;
+            min-height: 1.2em;
+            max-width: 1.2em;
+        }
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 30px;
+            padding: 0.4rem !important;
+        }
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) !important;
+        }
+        .am5stock-control-label
+        {
+            display: none;
+        }
+        .am5stock-control-list-container
+        {
+            background-color: rgba(38,37,37,.902);
+            border: 1px solid #2d2d2d;
+            border-radius: 0 0 6px 6px ;
+            border-top: none;
+            margin-top: 10px !important;
+            padding: 0 !important;
+            z-index: 999;
+        }
+        .am5stock-control-list-arrow
+        {
+            background-color: rgba(38,37,37,.902) !important;
+            display: inline-block !important;
+            left: 5px !important;
+            padding: 5px !important;
+            border-top: none;
+            border-bottom: 1px solid #2d2d2d;
+            border-right: 1px solid #2d2d2d;
+            position: absolute !important;
+        }
+        .am5stock-control-list
+        {
+            margin: 5px !important;
+            padding: 2px !important;
+        }
+        .am5stock-control-list li
+        {
+            padding: 2px 6px !important;
+        }
+        .am5stock-control-list li svg
+        {
+            margin-right: 0.8em !important;
+        }
+        .am5stock-control-list li label
+        {
+            margin-right: 1em !important;
+        }
+        .am5stock-list-item:hover
+        {
+            background: var(--buy-color);
+            border-radius: 5px;
+        }
+    }
+
+
+
+    .am5stock:nth-child(3)
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+    position: relative;
+
+    .am5stock-control-icon
+    {
+        min-width: 1.2em;
+        min-height: 1.2em;
+        max-width: 1.2em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .am5stock-control-icon svg
+    {
+        display: none;
+    }
+    .am5stock-control-label
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        left: 1px;
+        color: #c5c5c5;
+        border-radius: 4px;
+        padding: 0.4rem !important;
+        &:hover
+        {
+            border: 1px solid var(--buy-color);
+        }
+    }
+    .am5stock-control-list-container
+    {
+        background-color: rgba(38,37,37,.902);
+        border: 1px solid #2d2d2d;
+        border-radius: 0 0 6px 6px;
+        border-top: none;
+        margin-top: 10px !important;
+        padding: 0 !important;
+        z-index: 999;
+    }
+
+    .am5stock-control-list-arrow
+    {
+        background-color: rgba(38,37,37,.902) !important;
+        display: inline-block !important;
+        left: 5px !important;
+        padding: 5px !important;
+        border-top: none;
+        border-bottom: 1px solid #2d2d2d;
+        border-right: 1px solid #2d2d2d;
+        position: absolute !important;
+    }
+
+    .am5stock-control-list
+    {
+        margin: 5px !important;
+        padding: 2px !important;
+    }
+
+    .am5stock-control-list li
+    {
+        padding: 2px 6px !important;
+    }
+
+    ul.am5stock-control-list 
+    {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        li.am5stock-list-item 
+        {
+            padding: 2px 4px !important;
+            border-radius: 4px;
+
+            &:hover
+            {
+                color: #000 !important;
+                background-color: var(--buy-color) !important;
+                border-radius: 4px;
+            }
+                          
+            label 
+            {
+                cursor: pointer;
+                padding: 2px !important;
+                &:hover
+                {
+                    color: #000 !important;
+                    background-color: var(--buy-color) !important;
+                    border-radius: 4px;
+                }
+            }
+              
+            &.interval-selected-true  
+            {
+                background-color: var(--buy-color) !important;
+                border-radius: 4px;
+                padding: 2px 4px !important;
+
+                label 
+                {
+                        color: #000 !important;
+                }
+            }
+        }
+    }
+    @media (max-width: 423px) {
+        .am5stock-control-list-container
+    {
+        position: absolute;
+        top: 15;
+        left: -110px;
+    }
+
+    .am5stock-control-list-arrow
+    {
+        display: none !important;
+    }
+    }
+}
+
+
+    .am5stock:nth-child(4)
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        border: none;
+        position: relative;
+
+        .am5stock-control-icon
+        {
+            min-width: 1.2em;
+            min-height: 1.2em;
+            max-width: 1.2em;
+            display: inline-block !important;
+            position: relative;
+        }
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 30px;
+            padding: 0.4rem !important;
+        }
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color);
+        }
+        .am5stock-control-icon svg path:hover
+        {
+            color: var(--buy-color) !important;
+        }
+        .am5stock-control-label
+        {
+            display: none;
+        }
+        .am5stock-control-list-container
+        {
+            background-color: rgba(38,37,37,.902);
+            border: 1px solid #2d2d2d;
+            border-radius: 0 0 6px 6px ;
+            border-top: none;
+            margin-top: 10px !important;
+            padding: 0 !important;
+            z-index: 999;
+        }
+        .am5stock-control-list-arrow
+        {
+            position: absolute !important;
+            left: 10px !important;
+            display: inline-block !important;
+            padding: 5px !important;
+            background-color: rgba(38,37,37,.902) !important;
+            border-top: none;
+            border-bottom: 1px solid #2d2d2d;
+            border-right: 1px solid #2d2d2d;
+        }
+        .am5stock-list-search
+        {
+            padding-bottom: 0.25em !important;
+            background-color: rgba(38,37,37,.902) !important;
+            margin: 0.5em 0.7em !important;
+        }
+        .am5stock-list-search input
+        {
+            background: transparent;
+            padding: 6px 10px 6px 10px !important;
+            margin-top: 5px !important;
+        }
+        .am5stock-control-list
+        {
+            overflow-y: auto;
+            max-height: 300px;
+            margin: 5px !important;
+            padding: 2px !important;
+        }
+        .am5stock-control-list li
+        {
+            padding: 2px 6px !important;
+        }
+        .am5stock-list-item:hover
+        {
+            background: var(--buy-color);
+            border-radius: 5px;
+        }
+    }
+
+    .am5stock:nth-child(5)
+    {
+        border: none;
+        .am5stock-control-icon
+        {
+            min-width: 1.2em;
+            min-height: 1.2em;
+            max-width: 1.2em;
+            display: inline-block !important;
+            position: relative;
+        }
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 30px;
+            padding: 0.4rem !important;
+        }
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) !important;
+        }
+        .am5stock-control-icon svg path:hover
+        {
+            color: var(--buy-color) !important;
+        }
+        .am5stock-control-label
+        {
+            display: none;
+        }
+    }
+
+    .am5stock:nth-child(6)
+    {
+        // display: none;
+        border: none;
+        .am5stock-control-list li.am5stock-list-heading{
+            font-weight: bold;
+            color: #fff;
+            padding: 5px 5px 5px 5px !important;
+        }
+
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 30px;
+            padding: 0.4rem !important;
+        }
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) !important;
+        }
+        .am5stock-control-list-container
+        {
+            background-color: #2d2d2d;
+            border: 1px solid transparent;
+            margin-left: -35px !important;
+        }
+        .am5stock-control-list-container .am5stock-control-list-arrow
+        {
+            background: #2d2d2d;
+            border: 1px solid transparent
+        }
+        .am5stock-control-list .am5stock-list-item
+        {
+            display: flex !important;
+            align-items: center !important;
+        }
+        .am5stock-control-list .am5stock-list-item:last-of-type {
+            margin-bottom: 5px !important;
+        }
+        .am5stock-control-list .am5stock-list-item:not(.am5stock-list-info):hover
+        {
+            background-color: var(--buy-color);
+            border-radius: 3px;
+        }
+        .am5stock-control-list li.am5stock-list-heading[title="Y-axis scale"]{
+            display: none !important;
+            *{
+                display: none !important;
+            }
+        }
+        .am5stock-list-item input label
+        {
+            display: none !important;
+        }
+        .am5stock-list-item input[type="checkbox"]
+        {
+            width: 30% !important;
+        }
+        .am5stock-list-item input[type="radio"]
+        {
+            display: none;
+        }
+        .am5stock-list-item input[type="radio"] + label {
+            display: none;
+        }
+    }
+
+    .am5stock:nth-child(7)
+    {
+        border: none;
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            height: 30px;
+            width: 30px;
+            padding: 0.4rem !important;
+        }
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) !important;
+        }
+    }
+
+    .am5stock-control-drawing-tools{
+        .am5stock-control-icon .am5stock-icon-wide 
+        {
+            max-width: 60px
+        }
+        .am5stock-control-icon svg
+        {
+            border: 1px solid transparent;
+            border-radius: 4px !important;
+            height: 30px !important;
+            padding: .4rem !important;
+            width: 30px !important;
+        }
+        .am5stock .am5stock-control-list-container
+        {
+            background-color: #2d2d2d;
+            border: 1px solid transparent;
+        }
+        .am5stock .am5stock-control-list-container .am5stock-control-list-arrow
+        {
+            background: #2d2d2d;
+            border: 1px solid transparent
+        }
+        .am5stock-control-list .am5stock-list-item[title="Line"]
+        {
+            display: none
+        }
+
+        [title="Text color"]
+        {
+            .am5stock-control-label
+            {
+                display: none;
+            }
+        }
+        [title="Label font size"]
+        {
+            .am5stock-control-label
+            {
+                display: none;
+            }
+            .am5stock-control-list-arrow
+            {
+                position: absolute !important;
+                left: 8px !important;
+                display: inline-block !important;
+                padding: 5px !important;
+                background-color: rgba(38,37,37,.902) !important;
+                border-top: none;
+                border-bottom: 1px solid #2d2d2d;
+                border-right: 1px solid #2d2d2d;
+            }
+            .am5stock-control-list{
+                margin: 5px !important;
+                padding: 2px !important;
+            }
+            .am5stock-control-list li
+            {
+                padding: 2px 6px !important;
+            }
+            .am5stock-list-item:hover
+            {
+                background: var(--buy-color);
+                border-radius: 5px;
+            }
+        }
+        [title="Label font family"]
+        {
+            .am5stock-control-label
+            {
+                display: none;
+            }
+            .am5stock-control-list-arrow
+            {
+                position: absolute !important;
+                left: 8px !important;
+                display: inline-block !important;
+                padding: 5px !important;
+                background-color: rgba(38,37,37,.902) !important;
+                border-top: none;
+                border-bottom: 1px solid #2d2d2d;
+                border-right: 1px solid #2d2d2d;
+            }
+            .am5stock-control-list{
+                margin: 5px !important;
+                padding: 2px !important;
+            }
+            .am5stock-control-list li
+            {
+                padding: 2px 6px !important;
+            }
+            .am5stock-list-item:hover
+            {
+                background: var(--buy-color);
+                border-radius: 5px;
+            }
+        }
+        
+    }
+
+    .am5stock-control-drawing-tools {
+        &[style="display: block;"] {
+          @include flex(flex-start, center, row);
+        }
+        position: absolute;
+        top: 41px;
+        left: 53px;
+        width: 100%;
+        padding-top: 0.5rem !important;
+        &::before {
+          transition: 0.2s ease !important;
+          content: "";
+          left: 11px;
+          width: 100% !important;
+          position: absolute;
+          top: 5px;
+          height: 6vh !important;
+          background: linear-gradient(
+            90deg,
+            $chartOverlayBold,
+            $chartOverlayBold,
+            $chartOverlayBold,
+            transparent,
+            transparent,
+            transparent,
+            transparent
+          );
+          backdrop-filter: blur(1px);
+        }
+        &:hover {
+          &::before {
+            backdrop-filter: blur(10px);
+          }
+        }
+        .am5stock-control-button {
+          margin: 0 1rem 0 0 !important;
+          left: 8px;
+          &[title="Line style"],
+          &[title="Line color"],
+          &[title="Fill color"] {
+            left: 16px;
+            border: none;
+          }
+          &[title="Line color"],
+          &[title="Fill color"] {
+            .am5stock-control-icon {
+              width: 19px;
+              max-width: 19px;
+              border-radius: 5px;
+            }
+            .am5stock-control-icon-color-bg {
+              background: transparent;
+            }
+          }
+        }
+      }
+      .am5stock[title="Drawing tool"] {
+        .am5stock-control-label {
+          display: none !important;
+        }
+      }
+      .am5stock[title="Drawing tool"] .am5stock-control-list-container {
+        position: fixed !important;
+        top: 36px !important;
+        left: 0% !important;
+        background-color: $chartOverlayBold;
+        display: flex !important;
+        backdrop-filter: blur(2px);
+        width: 4rem;
+        height: 100svh !important;
+        border: none !important;
+        // padding: 0.5rem 0.1rem 2rem 0.5rem !important;
+        .am5stock-list-search {
+          display: none !important;
+        }
+        .am5stock-control-list {
+          margin: 0 !important;
+          overflow-y: overlay;
+          overflow-x: hidden;
+          li {
+            // height: 16px;
+            &:nth-child(1) {
+              margin-top: 0.2rem !important;
+            }
+            &:nth-last-child(1) {
+              margin-bottom: 1rem !important;
+            }
+            &:hover {
+              background-color: transparent;
+            }
+            &[title="Line"] {
+              left: 15px;
+              svg {
+                max-width: 26px;
+              }
+            }
+            svg {
+              width: 25px;
+              height: 30px;
+              max-width: 35px;
+              max-height: 35px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: 1px solid transparent;
+              border-radius: 5px ;
+              padding: 0.3rem !important;
+              &:hover {
+                border-color: $greenButton;
+                path {
+                  stroke: $greenButton;
+                }
+              }
+            }
+            // padding: 1rem !important;
+          }
+        }
+        label {
+          display: none;
+        }
+      }
+
+    .am5stock[title="Drawing tool"] .am5stock-control-list-container {
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        background-color: rgba(38, 37, 37, .902);
+        border: none ;
+        display: flex;
+        height: 100svh;
+        left: 0;
+        // padding: .5rem .1rem 2rem .5rem !important;
+        position: fixed;
+        top: 36px;
+        width: 4rem;
+    }
+
+    .am5stock-control-drawing-tools[style="display: block;"] {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start ;
+    }
+
+    .am5stock[title="Line thickness"]
+    {
+        border: none;
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color);
+        }
+        .am5stock-control-icon:hover
+        {
+            border: none;
+        }
+        .am5stock-control-list .am5stock-list-item:hover
+        {
+            background-color: var(--buy-color);
+            border-radius: 3px;
+        }
+    }
+
+    .am5stock[title="Line color"]
+    {
+        .am5stock-control-list-container
+        {
+            position: absolute;
+            top: 45px;
+            left: -5px;
+        }
+    }
+    .am5stock[title="Line style"]
+    {
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) ;
+        }
+        .am5stock-control-icon .am5stock-icon-wide svg path:hover
+        {
+            color: var(--buy-color);
+        }
+        .am5stock-control-list .am5stock-list-item:hover
+        {
+            background-color: var(--buy-color);
+            border-radius: 3px;
+        }
+    }
+    .am5stock[title="Show line extension"]
+    {
+        border: none;
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) ;
+            color: var(--buy-color);
+        }
+        .am5stock-control-list .am5stock-list-item:hover
+        {
+            background-color: var(--buy-color);
+            border-radius: 3px;
+        }
+    }
+    .am5stock[title="Eraser"]
+    {
+        border: none;
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) ;
+            color: var(--buy-color);
+        }
+        .am5stock-control-list .am5stock-list-item:hover
+        {
+            background-color: var(--buy-color);
+            border-radius: 3px;
+        }
+    }
+    .am5stock[title="Clear all drawings"]
+    {
+        border: none;
+        .am5stock-control-icon svg:hover
+        {
+            border: 1px solid var(--buy-color) ;
+            color: var(--buy-color);
+        }
+        .am5stock-control-list .am5stock-list-item:hover
+        {
+            background-color: var(--buy-color);
+            border-radius: 3px;
+        }
+        .am5stock-control-label
+        {
+            display: none;
+        }
+    }
+}

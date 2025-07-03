@@ -1,0 +1,67 @@
+
+
+
+
+
+
+
+
+
+.Symbol {
+  width: 100%;
+}
+.Symbol .Symbol-list {
+  /* height: 41vh; */
+  overflow-y: auto;
+}
+.Symbol .search-container {
+  margin-bottom: 0.6rem !important;
+  position: relative;
+  margin: 5px;
+}
+.Symbol .search-container .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: none;
+}
+.Symbol .search-container input {
+  padding: 0.5rem !important;
+  border-radius: 6px;
+}
+.Symbol .Symbol-table {
+  width: 100%;
+}
+.Symbol .Symbol-thead {
+  margin-bottom: 0.6rem !important;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.Symbol .Symbol-thead th {
+  min-width: 5rem;
+  font-weight: bold !important;
+}
+.Symbol .Symbol-th,
+.Symbol .Symbol-td {
+  font-weight: normal;
+  padding: 2px;
+  max-width: 50px;
+  /* Prevent text from wrapping */
+  white-space: nowrap;
+  /* Hide overflow text */
+  overflow: hidden;
+  /* Show ellipsis (...) for overflow text */
+  text-overflow: ellipsis;
+}
+.Symbol .Symbol-th .afterDecimal,
+.Symbol .Symbol-td .afterDecimal {
+  font-size: 0.8em;
+}
+.Symbol .Symbol-Name-Col {
+  padding-left: 5px;
+}
+.Symbol .Symbol-th {
+  text-align: left;
+}/*# sourceMappingURL=Symbol.css.map */

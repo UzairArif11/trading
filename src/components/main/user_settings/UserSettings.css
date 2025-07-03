@@ -1,0 +1,41 @@
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem !important;
+}
+.user-container select {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.user-container .theme-switcher {
+  text-align: center;
+}
+.user-container .user-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-container .user-info {
+  padding-right: 5px;
+  font-weight: bold;
+}
+.user-container .logout-button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.user-container .non-user-container {
+  display: flex;
+  justify-content: center;
+}
+.user-container .login-button {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}/*# sourceMappingURL=UserSettings.css.map */

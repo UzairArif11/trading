@@ -1,0 +1,95 @@
+
+  .slider-container {
+    width: 100%;
+    max-width: 500px;
+    /* margin: 8px auto !important; */
+    margin: 18px auto 8px auto !important;
+    /* padding: 5px 0 !important; */
+    padding: 5px 15px !important;
+    position: relative;
+    cursor: not-allowed;
+    margin-top: 30px !important;
+  }
+  
+  .slider-track {
+    position: relative;
+    height: 2px;
+    background-color: #444;
+    border-radius: 2px;
+    /* cursor: pointer; */
+    cursor: not-allowed;
+    overflow: visible;
+  }
+  
+  .slider-fill {
+    position: absolute;
+    height: 100%;
+    /* background-color: #21c46d; */
+    top: 0;
+    left: 0;
+    border-radius: 2px;
+  }
+  
+  .slider-step {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: #1a1a1a;
+    border: 2px solid #666;
+    transform: translate(-50%, -50%) rotate(45deg);
+    border-radius: 2px;
+    transition: 'border-color 0s';
+    pointer-events: none;
+  }
+  
+  .slider-step.active {
+    border-color: #21c46d;
+  }
+  
+  .slider-thumb {
+    position: absolute;
+    top: 50%;
+    width: 13.5px;
+    height: 13.5px;
+    background-color: #1a1a1a;
+    border: 2px solid white;
+    transform: translate(-50%, -50%) rotate(45deg);
+    /* cursor: grab; */
+    z-index: 2;
+    cursor: not-allowed;
+  }
+  .slider-value {
+    position: absolute;
+    top: -25px; /* Higher above the track */
+    transform: translateX(-60%);
+    color: white;
+    font-size: 10px;
+    background-color: #333;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    pointer-events: none;
+    max-width: none;
+  }
+  /* .slider-fill, .slider-thumb {
+    transition: width 0s ease, left 0.3s ease;
+  }
+   */
+  /* Default (Buy) styles - already exist */
+/* .slider-container.buy .slider-fill {
+  background-color: #21c46d;
+} */
+
+.slider-container.buy .slider-step.active {
+  border-color: var(--active-color);
+}
+
+/* Sell styles - override with red */
+.slider-container.sell .slider-fill {
+  background-color: #ff4d4f; /* You can choose your preferred red */
+}
+
+.slider-container.sell .slider-step.active {
+  border-color: #ff4d4f;
+}

@@ -1,0 +1,295 @@
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+input,
+textarea {
+    border-color: var(--buy-color);
+    color: var(--text-color);
+
+    &::placeholder {
+        color: var(--placeholder-color);
+    }
+}
+
+input:hover,
+textarea:hover {
+    border-color: var(--text-focus-border-color);
+    box-shadow: 0 0 5px var(--shadow-color);
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--text-focus-border-color);
+    box-shadow: 0 0 5px var(--shadow-color);
+}
+
+// MAIN................................................................................................................
+.col-Left {
+    border-right-color: var(--buy-color) !important;
+}
+
+.col-Center {
+    background-color: var(--chart-background-color);
+}
+
+.col-Right {
+    border-left-color: var(--buy-color);
+}
+
+.col-Right2 {
+    border-top-color: var(--buy-color);
+}
+
+.row-Bottom {
+    border-top-color: var(--buy-color);
+}
+
+// CHART..............................................................................................................
+.Chart {
+    background: var(--chart-background-color);
+}
+
+.Chart-mask {
+    background-color: var(--chart-background-color);
+}
+
+// CHART TOOLBAR.................
+.am5stock-control-list-container {
+    background-color: var(--background-color);
+    border-color: var(--buy-color);
+    max-height: 50vh;
+    overflow-y: auto;
+
+    /* Style for WebKit browsers (Chrome, Safari) */
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+
+    /* Style for WebKit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: var(--scrollbar-thumb-color);
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: var(--scrollbar-track-color);
+    }
+}
+
+.am5stock-control-button {
+    color: var(--chart-color);
+}
+
+.am5stock-list-search input {
+    background-color: var(--transparent);
+}
+
+// SYMBOL..............................................................................................................
+.Symbol-price-up {
+    color: var(--price-up-color);
+}
+
+.Symbol-price-down {
+    color: var(--price-down-color);
+}
+
+.Symbol-price-same {
+    color: var(--text-color);
+}
+
+.search-icon {
+    color: var(--text-color);
+}
+
+.Symbol-thead {
+    color: var(--label-color);
+}
+
+.Symbol-tr {
+    &:hover {
+        background-color: var(--tr-hover-color);
+    }
+}
+
+
+// ORDER-PANEL............................................................................................................
+.mode-tab-button {
+    background-color: var(--inactive-background-color);
+    color: var(--inactive-color);
+
+    &:hover {
+        background-color: var(--active-mode);
+        color: var(--text-color);
+    }
+}
+
+.mode-tab-active {
+    background-color: var(--active-mode);
+    color: var(--text-color);
+
+    &:hover {
+        background-color: var(--active-mode-hover);
+    }
+}
+
+.tab-button {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-bottom: 3px solid var(--buy-color);
+    transition: background-color 0.5s ease, border-bottom-color 0.3s ease, color 0.5s ease;
+    border-radius: 5px 5px 0 0;
+
+    &:hover {
+        background-color: var(--tab-hover-color);
+    }
+}
+
+.order-tab-active {
+    border-bottom: 3px solid var(--tab-active-bottom);
+    transition: background-color 0.5s ease, border-bottom-color 0.3s ease, color 0.5s ease;
+}
+
+.order-label {
+    color: var(--label-color);
+}
+
+.price-box {
+    color: var(--inactive-color);
+    background-color: var(--inactive-background-color);
+}
+
+.price-box-buy:hover {
+    background-color: var(--price-up-color);
+    color: var(--text-color);
+}
+
+.price-box-buy-active {
+    background-color: var(--price-up-color);
+    color: var(--text-color);
+
+    &:hover {
+        background-color: var(--price-up-color-hover);
+    }
+}
+
+.price-box-sell:hover {
+    background-color: var(--price-down-color);
+    color: var(--text-color);
+}
+
+.price-box-sell-active {
+    background-color: var(--price-down-color);
+    color: var(--text-color);
+
+    &:hover {
+        background-color: var(--price-down-color-hover);
+    }
+}
+
+.place-order-button-buy {
+    background-color: var(--price-up-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: var(--price-up-color-hover);
+    }
+}
+
+.place-order-button-sell {
+    background-color: var(--price-down-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    &:hover {
+        background-color: var(--price-down-color-hover);
+    }
+}
+
+// ORDER-BOOK................................................................................................................
+.order-book-table-cell-bid-price {
+    color: var(--price-up-color);
+}
+
+.order-book-table-cell-ask-price {
+    color: var(--price-down-color);
+}
+
+// ACCOUNT-MANAGER............................................................................................................
+.tab-button-acc {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-bottom: 3px solid var(--buy-color);
+    transition: background-color 0.5s ease, border-bottom-color 0.3s ease, color 0.5s ease;
+    border-radius: 5px 5px 0 0;
+
+    &:hover {
+        background-color: var(--tab-hover-color);
+    }
+}
+
+.tab-active-acc {
+    border-bottom: 3px solid var(--tab-active-bottom);
+    transition: background-color 0.5s ease, border-bottom-color 0.3s ease, color 0.5s ease;
+}
+
+.close-icon {
+    background-color: var(--transparent);
+    color: var(--price-down-color);
+
+    &:hover {
+        color: var(--price-down-color-hover);
+    }
+}
+
+.positive-pnl {
+    color: var(--price-up-color);
+
+    &:hover {
+        color: var(--price-up-color-hover);
+    }
+}
+
+.negative-pnl {
+    color: var(--price-down-color);
+
+    &:hover {
+        color: var(--price-down-color-hover);
+    }
+}
+
+// ACCOUNT-MANAGER POSITIONS...............................
+.open-positions-table {
+    thead {
+        color: var(--label-color);
+    }
+}
+
+.open-positions-table td {
+    border-bottom-color: var(--buy-color);
+}
+
+.open-positions-table tbody tr:hover {
+    background-color: var(--tr-hover-color);
+}
+
+// ACCOUNT-MANAGER HISTORY...............................
+.history-table {
+    thead {
+        color: var(--label-color);
+    }
+}
+
+.history-table td {
+    border-bottom-color: var(--buy-color);
+}
+
+.history-table tbody tr:hover {
+    background-color: var(--tr-hover-color);
+}

@@ -1,0 +1,17 @@
+.metrics-panel {
+  padding: 20px;
+  margin: 20px;
+}
+.metrics-panel .metrics-list {
+  list-style-type: none;
+  padding: 0;
+}
+.metrics-panel .metrics-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.metrics-panel .metrics-list li strong {
+  margin-right: 8px;
+}/*# sourceMappingURL=Metrics-Panel.css.map */

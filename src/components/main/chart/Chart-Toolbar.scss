@@ -1,0 +1,26 @@
+//$candleSvg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 25 25' fill='none' class='css-15q0ovx'%3E%3Cpath d='M19.1266 3.55127H16.1266V7.55127H13.1266V17.5513H16.1266V21.5513H19.1266V17.5513H22.1266V7.55127H19.1266V3.55127Z' fill='currentColor'%3E%3C/path%3E%3Cpath d='M11.1266 11.5513H8.12659V7.55127H5.12659V11.5513H2.12659V17.5513H5.12659V21.5513H8.12659V17.5513H11.1266V11.5513Z' fill='currentColor'%3E%3C/path%3E%3C/svg%3E");
+
+// .am5stock-control-icon {
+//     background: $candleSvg center/contain no-repeat;
+//     margin: 0px !important;
+// }
+
+.am5stock-control-button {
+    border: 0px !important;
+    margin-right: 20px !important;
+    // margin-bottom: 2px !important;
+    cursor: pointer !important;
+    font-size: 10px;
+}
+
+.am5stock-control-label {
+    font-size: 10px;
+}
+
+.am5stock-control-list-arrow {
+    display: none !important;
+}
+
+// .am5stock-control-drawing-tools .am5stock-control-label {
+//     display: initial !important;
+// }

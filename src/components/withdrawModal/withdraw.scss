@@ -1,0 +1,151 @@
+$bodyColor: #232323 !important;
+$bodyColorLow: #232323;
+// $chartBgColor: transparent;
+$chartBgColor: $bodyColor;
+$firstBox: #2d2d2d !important;
+$firstBoxButton: #3b3a3a !important;
+$beforeFirstBox: #2b2b2bc2 !important;
+$inputBorderColor: #484848 !important;
+$downPrice: rgb(245, 36, 36) !important;
+$upPrice: rgb(17, 209, 97) !important;
+$boldTextColor: white !important;
+$normalTextColor: #c5c5c5 !important;
+$greenButton: rgb(33, 196, 109) !important;
+$redButton: rgb(225, 50, 50) !important;
+$buttonShadow: rgb(0 0 0 / 7%) !important;
+$greenDom: #0c724ac4 !important;
+$redDom: #db2e2ea3 !important;
+$greenDomText: #1ccf87 !important;
+$redDomText: #ea2b2b !important;
+$domQuantity: $normalTextColor;
+$inputGreenShadow: rgba(33, 196, 109, 0.144) !important;
+$chartOverlay: rgb(38 37 37 / 38%) !important;
+$chartOverlayBold: #262525e6;
+$divShadow: #00000087;
+$firstBoxContrast: #2e2e2e;
+$chartDownColor: rgb(245, 36, 36);
+$chartUpColor: rgb(17, 209, 97);
+$error: #f15 !important;
+$error2: #e13232 !important;
+$errorShadow: rgba(255, 17, 84, 0.347) !important;
+$candleLight: rgb(17, 209, 97);
+$candleDark: #2d2d2d;
+$inactivePositionBgClr: rgba(125, 120, 120, 0.36) !important;
+@mixin flex($j, $a, $d) {
+  display: flex !important;
+  justify-content: $j !important;
+  align-items: $a !important;
+  flex-direction: $d !important;
+}
+
+.confirm-box-2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $chartOverlay;
+  z-index: 999999999999;
+  display: none !important;
+  &[role='true'] {
+    @include flex(center, center, row);
+  }
+  &[role='onway'] {
+    @include flex(center, center, row);
+    .card {
+      .row-scss {
+        button:nth-child(3),
+        button:nth-child(1) {
+          display: none !important;
+        }
+        button:nth-child(2) {
+          display: block;
+        }
+      }
+      h2 {
+        &:nth-child(1) {
+          display: none !important;
+        }
+        &:nth-child(2) {
+          display: block !important;
+        }
+      }
+    }
+  }
+  .card {
+    margin: 1.5rem !important;
+    background-color: $firstBox;
+    width: 25rem !important;
+    box-shadow: 8px 8px 60px $divShadow;
+    h2 {
+      padding: 0.8rem !important;
+      text-align: center;
+      font-size: 18px;
+      color: $normalTextColor;
+      border-bottom: 1px solid $bodyColor;
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    overflow: hidden !important;
+    .row-scss {
+      @include flex(space-evenly, center, row);
+      height: 40px !important;
+      button {
+        transition: 0.1s ease;
+        color: $bodyColor;
+        width: 100% !important;
+        border-radius: 0 !important;
+        height: 100% !important;
+        &:nth-child(1) {
+          border-right: 1px solid $bodyColor;
+          color: $bodyColor;
+          // background-color: $greenButton;
+        }
+        &:nth-child(2) {
+          background-color: $firstBoxButton;
+          display: none;
+        }
+        &:nth-child(3) {
+          // background-color: $redButton;
+        }
+        &:hover {
+          filter: brightness(90%);
+        }
+      }
+    }
+  }
+}
+
+.amountInput {
+  height: 27px;
+  width: 100%;
+  padding-left: 10px !important;
+}
+.input-div-1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px !important;
+  // padding-bottom: 25px !important;
+}
+.text-color {
+  color: $normalTextColor;
+}
+.mt-5 {
+  margin-top: 5px !important;
+}
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+.error-border {
+  border: 2px solid red !important;
+}
+.mx-35 {
+  margin-left: 35px !important;
+  margin-right: 35px !important;
+}
+.my-15 {
+  margin-top: 15px !important;
+  margin-bottom: 15px !important;
+}

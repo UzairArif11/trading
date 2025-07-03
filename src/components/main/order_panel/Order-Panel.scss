@@ -1,0 +1,427 @@
+.mode-tabs {
+	margin-top: 20px;
+	width: 100%;
+	text-align: center;		
+}
+
+.mode-tab-button {
+	width: 40%;
+	margin: 1px;
+}
+
+.order-panel {
+	height: 70vh;
+	transition: height 0.5s ease;
+	padding-bottom: 20px !important;
+}
+
+.order-panel-symbol {
+	padding: 10px;
+	font-weight: bold;
+}
+
+.order-tabs {
+	display: flex;
+}
+
+.tab-button {
+	flex: 1;
+	border: none;
+	cursor: pointer;
+	border-radius: 0px;	
+}
+
+.order-section {
+	display: none;
+	padding: 20px;
+	margin-top: -1px;
+	transition: opacity 0.5s ease;
+}
+
+.order-label {
+	margin-top: 10px;
+}
+
+
+.place-order {
+	text-align: center;
+}
+
+.place-order-button {
+	width: 80%;	
+	margin-top: 10px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+	padding-bottom: 2px;
+}
+
+.price-box-container {
+	display: flex;
+	justify-content: space-between; // or use 'space-around' for some space around the boxes
+	align-items: center;
+	margin: 10px;
+}
+
+.price-box {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	cursor: pointer;
+	padding: 4px;
+	width: 100%;
+	height: 40px;
+}
+
+.price-box-buy {
+	border-radius: 10px 0 0 10px;
+	padding-left: 8px;
+}
+
+.price-box-sell {
+	border-radius: 0 10px 10px 0;
+	text-align: right;
+	padding-right: 8px;
+}
+.right-nav{
+	width: 	20rem;
+}
+
+
+
+// Css for the right panel Select symbol options
+
+.custom-option {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	padding: 5px 10px;
+	padding: 0px 4px;
+	border-bottom: 0.1px solid rgb(88, 88, 88);
+  }
+  
+  .custom-option:not(:last-child) {
+	margin-bottom: 5px; /* Add margin-bottom to each option except the last one */
+  }
+  
+  .symbol {
+	font-size: 11px;
+  }
+  
+  .custom-option .symbol, .header .symbol-title {
+	flex: 1;
+	text-align: left;
+	padding: 5px 10px;
+  }
+  
+  .custom-option .bid, .header .bid-title,
+  .custom-option .ask, .header .ask-title {
+	flex: 0.5;
+	text-align: right;
+	// font-size: 12px;
+	padding: 5px 10px;
+  }
+//   .custom-option .bid, .bid-title {
+// 	margin-right: 10px !important;
+//   }
+  
+  .custom-option .fractional {
+	font-size: 0.8em;
+  }
+  
+  .header {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	background-color: #2d2d2d; /* Solid background to cover behind scrolling */
+	color: #ffffff;
+	padding: 7px 10px !important;
+	margin-bottom: 5px !important;
+	margin-left: -8px !important;
+	margin-right: -8px !important;
+	position: sticky; /* Makes the header sticky */
+	top: 0; /* Keeps it at the top */
+	z-index: 2; /* Ensures it stays above other content */
+  }
+  
+  .header .symbol-title, .header .bid-title, .header .ask-title {
+	margin: 0;
+  }
+  
+  /* Customization for the react-select component */
+  .custom-option.is-focused {
+	background-color: transparent; /* Remove the default focus background */
+  }
+  
+  .custom-option:hover {
+	background-color: #333; /* Custom hover color */
+  }
+  
+  .react-select__option--is-selected {
+	background-color: #444 !important; /* Selected color without zoom effect */
+	color: #ffffff !important;
+  }
+  
+  /* Additional styles for the react-select component */
+  .react-select__control {
+	background-color: #2d2d2d; /* Match the background color of the header */
+	border: none;
+	box-shadow: none;
+  }
+  
+  .react-select__menu {
+	background-color: #2d2d2d; /* Match the background color of the header */
+	border: none;
+	box-shadow: none;
+  }
+  
+  .react-select__option {
+	background-color: #2d2d2d;
+	color: #ffffff;
+  }
+  
+  .react-select__single-value {
+	color: #ffffff;
+  }
+
+  
+  .settings-right-panel{
+  .header-select-container {
+	display: grid;                // Use CSS Grid layout
+	grid-template-columns: 1fr 1fr; // Default to two equal columns
+	align-items: center;          // Center items vertically
+	gap: 4.5rem;                    // Add space between the columns
+  }
+  
+  .header-select-container h2 {
+	margin: 0;                    // Remove default margin from the heading
+	grid-column: 1;               // Make sure the heading occupies the first column
+	padding-left: 1rem;           // Add padding to the left of the heading
+  }
+  
+  .header-select-container .select-container {
+	grid-column: 2;               // Make sure the select dropdown occupies the second column
+	padding-right: 1rem;          // Add padding to the right of the select
+	justify-self: end;
+  }
+
+
+  .css-b62m3t-container {
+	justify-self: end;
+	margin-right: 1rem !important;
+}
+.row-1-col-2 {
+	text-align: end !important;
+	margin-right: 1rem !important;
+}
+.row-2-col-2 {
+	text-align: end !important;
+	margin-right: 1rem !important;
+}
+  
+  
+  @media (min-width: 300px) and (max-width: 501px) {
+	.header-select-container {
+	  grid-template-columns: 1fr 1fr;  // Use 2 equal columns even for smaller screens
+	  gap: 3rem;                       // Maintain space between the columns
+	  align-items: center;           // Center content vertically
+	}
+	.css-b62m3t-container {
+		justify-self: end;
+		margin-right: 1rem !important;
+	}
+	.row-1-col-2 {
+		text-align: end !important;
+		margin-right: 1rem !important;
+	}
+	.row-2-col-2 {
+		text-align: end !important;
+		margin-right: 1rem !important;
+	}
+  
+	.header-select-container h2 {
+	  grid-column: 1;                 // Heading stays in the first column
+	  padding-left: 1rem;             // Same padding on left for symmetry
+	}
+  
+	.header-select-container .select-container {
+	  grid-column: 2;                 // Select stays in the second column
+	  padding-right: 1rem;            // Same padding on right for symmetry
+	}
+  }
+  }
+
+  .tooltip-toggle
+  {
+	display: grid;
+	grid-template-columns: 2fr 2fr;
+	gap: 4.5rem;
+	align-items: center;
+	height: 46.4px;
+	.react-switch-bg
+	{
+		height: 15px !important;
+		width: 40px !important;
+	}
+	.react-switch-handle
+	{
+		height: 13px !important;
+		width: 13px !important;
+	}
+  }
+
+    .floating-window-panel {
+		top: 100px;
+		left: 100px;
+		z-index: 999;
+		background: #1a1a1a;
+		border: 1px solid #333;
+		border-radius: 8px;
+		box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+		user-select: none;
+		display: flex;
+		align-items: center;																		
+	}
+
+	.trade-controls {
+		display: flex;
+		border-radius: 6px;
+		overflow: hidden;																
+	}
+
+	.trade-controls > div {
+		flex: 1;
+		padding: 10px !important;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.drag-handle {
+		font-size: 18px;
+		user-select: none;
+		display: flex;
+		align-items: center;
+		justify-content: center; 
+		width: 17px;      
+		height: 100%;
+		flex-shrink: 0; 
+		padding: 10px 5px; 
+	}
+
+	.close-btn {
+		margin-left: -1px !important;
+		background: none;
+		border: none;
+		color: #fff;
+		font-size: 16px;
+		cursor: pointer;
+		user-select: none;
+		display: flex;
+		align-items: center;  
+		justify-content: center;    
+		width: 17px;             
+		height: 100%;	
+	}
+
+.floating-window{
+	input {
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #555;
+		color: #fff;
+		text-align: center;
+		width: 80px;
+		margin-top: 4px;
+	}
+
+	.size {
+		background: #2c2c2c;
+	}
+}
+
+.style-settings-container {
+  padding: 15px;
+  border-bottom: 1px solid #232323;
+  position: relative;
+
+  h2 {
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #c5c5c5;
+  }
+
+  .style-selector-wrapper {
+    position: relative;
+  }
+
+  .style-toggle-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 12px !important;
+    background-color: #2a2a2a;
+    border: 1px solid #484848;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: var(--buy-color);
+    }
+  }
+
+  .style-preview {
+    display: flex;
+    gap: 4px;
+  }
+
+  .color-swatch {
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    display: inline-block;
+  }
+
+  .style-name {
+    margin: 0 8px !important;
+    flex-grow: 1;
+    text-align: left;
+    font-size: 13px;
+  }
+
+  .dropdown-arrow {
+    font-size: 10px;
+    color: #888;
+  }
+
+  .style-options-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #2a2a2a;
+    border: 1px solid #484848;
+    border-radius: 4px;
+    margin-top: 4px;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .style-option {
+    display: flex;
+    align-items: center;
+    padding: 3px 11px !important;	
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    // &:hover {
+    //   background-color: rgb(33, 196, 109);
+    //   color: #2d2d2d;
+    // }
+
+    &.selected {
+      background-color: #444;
+    }
+  }
+}
